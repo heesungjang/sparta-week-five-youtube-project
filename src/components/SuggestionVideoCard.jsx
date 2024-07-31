@@ -27,7 +27,11 @@ const SuggestionVideoCard = ({ video }) => {
             )}
           </span>
           <div className='flex text-[12px] lg:text-[10px] xl:text-[12px] font-semibold text-white/[0.7] truncate overflow-hidden'>
-            <span>{`${abbreviateNumber(video?.stats?.views, 2)} 조회수`}</span>
+            <span>
+              {video?.stats?.views
+                ? `${abbreviateNumber(video?.stats?.views, 2)} 조회수`
+                : null}
+            </span>
             <span className='flex text-[24px] leading-none font-bold text-white/[0.7] relative top-[-10px] mx-1'>
               .
             </span>
