@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
-import ytLogo from '../images/yt-logo.png';
-import ytLogoMobile from '../images/yt-logo-mobile.png';
+import Logo from '../images/logo-active.png';
+import LogoMobile from '../images/logo-active.png';
 
 import { SlMenu } from 'react-icons/sl';
 import { IoIosSearch } from 'react-icons/io';
@@ -36,7 +36,7 @@ const Header = () => {
   const pageName = pathname?.split('/')?.filter(Boolean)?.[0];
 
   return (
-    <div className='sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-white dark:bg-black'>
+    <div className='sticky top-0 z-10 flex flex-row items-center justify-between h-14 px-4 md:px-5 bg-zinc-900'>
       {loading && <Loader />}
 
       <div className='flex h-5 items-center'>
@@ -52,13 +52,13 @@ const Header = () => {
             )}
           </div>
         )}
-        <Link to='/' className='flex h-5 items-center'>
+        <Link to='/' className='flex h-7 items-center'>
           <img
             className='h-full hidden dark:md:block'
-            src={ytLogo}
-            alt='Youtube'
+            src={Logo}
+            alt='LogoMobile'
           />
-          <img className='h-full md:hidden' src={ytLogoMobile} alt='Youtube' />
+          <img className='h-full md:hidden' src={LogoMobile} alt='Youtube' />
         </Link>
       </div>
       <div className='group flex items-center'>
